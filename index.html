@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="head">
+            <h1>Crud</h1>
+            <h3>Logiciels de stocage</h3>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup="Tot()" type="number" id="price" placeholder="price">
+                <input onkeyup="Tot()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="Tot()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="Tot()" type="number" id="dicsovers" placeholder="discovers">
+                <small id="total"></small>
+            </div>
+
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">Valider</button>
+
+        </div>
+        <div class="outputs"></div>
+        <div class="searchcontainer">
+            <input onkeyup="SearchMod(this.value)" autocomplete="off" type="text" id="search" placeholder="search">
+            <div class="btnSearch">
+                <button onclick=" GetSearchMod(this.id)" id="btnSearchTitle">Search Title</button>
+                <button onclick=" GetSearchMod(this.id)" id="btnSearchCategory">Search Category</button>
+            </div>
+        </div>
+        <div id="deletALL"></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delet</th>
+
+            </tr>
+
+            <tbody id="tbody">
+
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
